@@ -1,12 +1,11 @@
  
-STM32 POC
-
-    STM32 POC Definition :- 
+# STM32 POC Definition
+  
 STM32F103C8 MCU collect Temperature data from DS18B20 Temperature sensor and get current Date & Timestamp from DS1307 RTC module Realtime Temperature data with  Date & Timestamp data store in sdcard and send Temperature data to cloud using sim800a GSM module.
 
- Schematic Diagram
+ ## Schematic Diagram
 
-![alt text](https://github.com/simformsolutions/STM32-Temperaturelogger-IOT/blob/master/screenshots/screenshot1.png)
+![alt text](https://github.com/kamlesh545/STM32F103-DS18B20-IOT/blob/master/screenshots/screenshot1.png)
 
 
 DS18B20 Temperature sensor connect with stm32 MCU using 1 wire bus protocol
@@ -27,23 +26,23 @@ Code :-
 
  This following code first configure clock and enable GPIO port then initialize UART communication and send AT commands for configure GPRS services and initialize RTC module.
 
-![alt text](https://github.com/simformsolutions/STM32-Temperaturelogger-IOT/blob/master/screenshots/screenshot2.png)
+![alt text](https://github.com/kamlesh545/STM32F103-DS18B20-IOT/blob/master/screenshots/screenshot2.png)
 
 This following code initialize sd card with STM32 and create csv file if not present in sd card.
 
-![alt text](https://github.com/simformsolutions/STM32-Temperaturelogger-IOT/blob/master/screenshots/screenshot3.png)
+![alt text](https://github.com/kamlesh545/STM32F103-DS18B20-IOT/blob/master/screenshots/screenshot3.png)
 
 This following code get current Date & Time from RTC module and get temperature data from sensor and write  temperature and date and time stamp data into csv file.
 
-![alt text](https://github.com/simformsolutions/STM32-Temperaturelogger-IOT/blob/master/screenshots/screenshot4.png)
+![alt text](https://github.com/kamlesh545/STM32F103-DS18B20-IOT/blob/master/screenshots/screenshot4.png)
 
 
 This following code stm32 send AT commands to GSM module for intialize http service and send temperature data to cloud.
 
 
-![alt text](https://github.com/simformsolutions/STM32-Temperaturelogger-IOT/blob/master/screenshots/screenshot5.png)
+![alt text](https://github.com/kamlesh545/STM32F103-DS18B20-IOT/blob/master/screenshots/screenshot5.png)
 
  This following code apply kalman filter formula on temperature data and give filter value
  
 
-![alt text](https://github.com/simformsolutions/STM32-Temperaturelogger-IOT/blob/master/screenshots/screenshot6.png)
+![alt text](https://github.com/kamlesh545/STM32F103-DS18B20-IOT/blob/master/screenshots/screenshot6.png)
